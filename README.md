@@ -28,7 +28,17 @@ Keeping track of gym workouts using paper logs is inconvenient, easy to misplace
 _Coming soon - Project is in initial development_
 
 ## Documentation
-_Coming soon - Project is in initial development_
+
+### Project Documentation
+Comprehensive documentation is maintained in the [`docs/`](/docs) directory, including:
+- Functional Requirements (FRs)
+- Non-Functional Requirements (NFRs)
+- API Specifications
+- Architecture Decisions (ADRs)
+- System Design Documents
+
+### Version History
+All notable changes, updates, and version releases are documented in [`CHANGELOG.md`](/CHANGELOG.md) in the root directory.
 
 ## Development Status
 

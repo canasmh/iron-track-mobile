@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iron_track/core/theme/app_theme.dart';
+import 'package:iron_track/features/auth/screens/login_screen.dart';
+import 'package:iron_track/features/auth/screens/signup_screen.dart';
 import 'package:iron_track/features/auth/screens/welcome_screen.dart';
 
 void main() {
@@ -34,7 +36,11 @@ class MyApp extends StatelessWidget {
       title: 'Iron Track',
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const WelcomeScreen(),  // We'll create this next
+      home: const WelcomeScreen(),
+      routes: {
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+      },
     );
   }
 }

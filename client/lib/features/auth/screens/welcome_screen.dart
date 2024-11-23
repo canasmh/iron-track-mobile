@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iron_track/core/widgets/app_logo.dart';
+import 'package:iron_track/features/auth/screens/login_screen.dart';
+import 'package:iron_track/features/auth/screens/signup_screen.dart';
 import 'package:iron_track/features/auth/widgets/auth_options.dart';
 import 'package:iron_track/features/auth/widgets/welcome_header.dart';
 
@@ -14,6 +16,16 @@ class WelcomeScreen extends StatelessWidget {
     vertical: 64.0,
   );
 
+  void _handleLogin(BuildContext context) {
+    Navigator.of(context).pushNamed(LoginScreen.routeName);
+    debugPrint('Login pressed');
+  }
+
+  void _handleSignUp(BuildContext context) {
+    Navigator.of(context).pushNamed(SignUpScreen.routeName);
+    debugPrint('Sign Up pressed');
+  }
+
   const WelcomeScreen({super.key});
 
   @override
@@ -23,11 +35,14 @@ class WelcomeScreen extends StatelessWidget {
       body: SafeArea( 
         child: Padding(
           padding: _bodyPadding,
-          child: const Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               WelcomeHeader(),
-              AuthOptions(),
+              AuthOptions(
+                onLoginTap: () => _handleLogin(context),
+                onSignUpTap: () => _handleSignUp(context),
+              ),
             ],
           ),
         ),

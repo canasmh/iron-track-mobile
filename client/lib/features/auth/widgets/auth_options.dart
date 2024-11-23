@@ -5,14 +5,14 @@ import 'package:iron_track/features/auth/widgets/social_login_section.dart';
 /// A widget that displays authentication options including email/password
 /// login buttons and social login options.
 class AuthOptions extends StatelessWidget {
-  const AuthOptions({ super.key });
+  final VoidCallback onLoginTap;
+  final VoidCallback onSignUpTap;
 
-  void _handleLogin() {
-    debugPrint('Login pressed');
-  }
-  void _handleSignUp() {
-    debugPrint('Sign Up pressed');
-  }
+  const AuthOptions({ 
+    super.key,
+    required this.onLoginTap,
+    required this.onSignUpTap,
+  });
 
   void _handleSocialLogin(String provider) { 
     debugPrint('Social Login Pressed: $provider');
@@ -25,8 +25,8 @@ class AuthOptions extends StatelessWidget {
     return Column(
       children: [
         AuthButtonsSection(
-          onLoginPressed: _handleLogin,
-          onSignUpPressed: _handleSignUp,
+          onLoginTap: onLoginTap,
+          onSignUpTap: onSignUpTap,
         ),
         SizedBox(height: 32),
         SocialLoginSection(

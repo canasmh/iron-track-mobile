@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// Defines the core color palette for the application
+/// 
 class AppColors {
   // Primary Orange Palette
   static const Color primary100 = Color.fromRGBO(249, 116, 22, 0.1);
@@ -43,17 +44,20 @@ class AppGradients {
 /// Defines text styles used throughout the application
 class AppTextStyles {
   static final TextTheme theme = TextTheme(
+    // Large Title
     displayLarge: GoogleFonts.robotoSerif(
       fontSize: 34,
       letterSpacing: 2,
       color: AppColors.neutral900,
     ),
+    // Title 1
     headlineLarge: GoogleFonts.robotoSerif(
       fontSize: 28,
       letterSpacing: 2,
       color: AppColors.neutral900,
       fontWeight: FontWeight.w600,
     ),
+    // Title 2
     headlineMedium: GoogleFonts.roboto(
       fontSize: 22,
       letterSpacing: 2,
@@ -66,11 +70,13 @@ class AppTextStyles {
       fontWeight: FontWeight.w600,
       color: AppColors.neutral600,
     ),
+    // Body Regular
     bodyLarge: GoogleFonts.roboto(
       fontSize: 17,
       color: AppColors.neutral500,
       fontWeight: FontWeight.w400,
     ),
+    // Callout
     bodyMedium: GoogleFonts.roboto(
       fontSize: 16,
       fontWeight: FontWeight.w400,

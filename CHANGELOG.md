@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Create welcome screen UI [#15](https://github.com/canasmh/iron-track-mobile/pull/15)
+- Establish Application Theme [#15](https://github.com/canasmh/iron-track-mobile/pull/15)
 
 ## [0.1.0] - 2024-11-19
 

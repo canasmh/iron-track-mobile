@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iron_track/features/auth/constants/strings.dart';
 
+/// A section displaying social authentication options with a divider.
+/// 
+/// Presents Facebook, Twitter, Google, and Apple sign-in buttons
+/// arranged horizontally below a "Continue With" divider.
+/// 
 class SocialLoginSection extends StatelessWidget {
   static const double _horizontalSpacing = 16.0;
   static const double _verticalSpacing = 32.0;
@@ -108,4 +113,3 @@ class SocialLoginSection extends StatelessWidget {
     );
   }
 }
-

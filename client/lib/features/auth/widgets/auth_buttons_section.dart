@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:iron_track/features/auth/constants/strings.dart';
 
+/// A section containing authentication-related buttons (Login and Sign Up)
+/// 
+/// Shows loading state in the login button when processing.
+/// 
 class AuthButtonsSection extends StatelessWidget {
   static const double _buttonSpacing = 16.0;
 

@@ -1,4 +1,5 @@
 /// Strings used in the welcome header.
+/// 
 abstract class AuthStrings {
   static const WelcomeStrings welcome = WelcomeStrings._();
   static const ButtonStrings buttons = ButtonStrings._();

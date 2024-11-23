@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// Placeholder login screen
+/// 
 class LoginScreen extends StatelessWidget {
   static const String routeName = '/login';
   

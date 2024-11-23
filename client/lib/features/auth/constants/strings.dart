@@ -2,6 +2,7 @@
 abstract class AuthStrings {
   static const WelcomeStrings welcome = WelcomeStrings._();
   static const ButtonStrings buttons = ButtonStrings._();
+  static const SocialStrings social = SocialStrings._();
   
   const AuthStrings._();
 }
@@ -18,4 +19,10 @@ class ButtonStrings {
   final String signUp = 'Sign Up';
   
   const ButtonStrings._();
+}
+
+class SocialStrings {
+  final String continueWith = 'Continue With';
+
+  const SocialStrings._();
 }

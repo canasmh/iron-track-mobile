@@ -1,14 +1,15 @@
 ---
 name: Bug Report
 about: Create a report to help us improve
-title: "[\U0001F41E] <--! Replace with title -->"
+title: "\U0001F41E <--! Replace with title -->"
 labels: bug
 assignees: ''
 
 ---
 
 ### 🐞🐞🐞
-## Description
+
+## Problem Statement
 <!-- A clear and concise description of the bug -->
 
 ## Steps To Reproduce
@@ -29,5 +30,5 @@ Device: [e.g. iPhone 14]
 OS: [e.g. iOS 17.1]
 App Version: [e.g. 1.0.0]
 
-Additional Context
+## Additional Context
 <!-- Add any other context about the problem here -->

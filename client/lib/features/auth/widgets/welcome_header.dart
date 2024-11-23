@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iron_track/core/widgets/app_logo.dart';
+import 'package:iron_track/features/auth/constants/strings.dart';
 
 /// A header widget displayed on the welcome screen showing the app logo
 /// and welcome message. This widget adapts to the current theme and
@@ -23,7 +24,7 @@ class WelcomeHeader extends StatelessWidget {
     return Column(
       children: [
         Text(
-          _Strings.welcome,
+          AuthStrings.welcome.welcome,
           textAlign: TextAlign.center,
           style: textTheme.headlineMedium,
         ),
@@ -31,21 +32,11 @@ class WelcomeHeader extends StatelessWidget {
         AppLogo(textStyle: headlineLarge),
         const SizedBox(height: _verticalSpacing),
         Text(
-          _Strings.tagline,
+          AuthStrings.welcome.tagline,
           textAlign: TextAlign.center,
           style: textTheme.titleLarge,
         )
       ],
     );
   }
-}
-
-/// Strings used in the welcome header.
-/// Could be moved to a localization file if needed.
-abstract class _Strings {
-  static const welcome = 'Welcome to';
-  static const tagline = 'A better way to\ntrack your routines';
-  
-  // Prevent instantiation
-  const _Strings._();
 }

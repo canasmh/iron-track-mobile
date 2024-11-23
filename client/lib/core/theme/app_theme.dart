@@ -46,12 +46,12 @@ class AppTextStyles {
     displayLarge: GoogleFonts.robotoSerif(
       fontSize: 34,
       letterSpacing: 2,
-      color: AppColors.neutral700,
+      color: AppColors.neutral900,
     ),
     headlineLarge: GoogleFonts.robotoSerif(
       fontSize: 28,
       letterSpacing: 2,
-      color: AppColors.neutral700,
+      color: AppColors.neutral900,
       fontWeight: FontWeight.w600,
     ),
     headlineMedium: GoogleFonts.roboto(

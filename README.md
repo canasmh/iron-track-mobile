@@ -25,7 +25,54 @@ Keeping track of gym workouts using paper logs is inconvenient, easy to misplace
 
 ## Getting Started
 
-_Coming soon - Project is in initial development_
+### Project Structure
+
+```
+iron_track/
+├── client/             # Flutter mobile app
+│   ├── lib/
+│   │   ├── core/       # Shared utilities, themes, widgets
+│   │   ├── features/   # Feature-based modules
+│   │   └── shared/     # Shared business logic
+│   └── test/           # Tests mirror lib/ structure
+├── docs/
+│   └── requirements/   # Functional and non-functional requirements
+└── hooks/              # Git hooks for development
+```
+
+### Prerequisites
+- Flutter SDK >=3.16.0
+- Dart SDK >=3.2.0
+- VS Code + Flutter/Dart extensions
+- Git
+
+#### Key Dependencies
+- `font_awesome_flutter`: Icons and branding
+- `flutter_lints`: Code quality and style
+
+#### For iOS development:
+- macOS (for iOS builds)
+- Xcode >=15.0
+- CocoaPods
+
+
+#### For Android development:
+- Android SDK
+- Android Studio or Command-line tools
+
+### Setup
+1. Copy the pre-commit hook:
+    ```bash
+    cp hooks/pre-commit .git/hooks/
+    chmod +x .git/hooks/pre-commit
+    ```
+
+2. VS Code:
+    - Project settings are provided in `.vscode/settings.json`
+    - Use F5 to run/debug the app
+3. Testing:
+    - Tests mirror the source code structure
+    - Run tests: `flutter test`
 
 ## Documentation
 

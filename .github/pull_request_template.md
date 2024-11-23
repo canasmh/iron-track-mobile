@@ -22,6 +22,7 @@
 
 ## Checklist
 <!-- Verify that you have done these things before submitting -->
+- [ ] I have updated the `CHANGELOG.md` accordingly
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my code
 - [ ] I have commented my code, particularly in hard-to-understand areas

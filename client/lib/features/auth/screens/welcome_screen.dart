@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iron_track/core/theme/app_theme.dart';
 import 'package:iron_track/core/widgets/app_logo.dart';
 import 'package:iron_track/features/auth/screens/login_screen.dart';
 import 'package:iron_track/features/auth/screens/signup_screen.dart';
@@ -32,18 +33,23 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: SafeArea( 
-        child: Padding(
-          padding: _bodyPadding,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              WelcomeHeader(),
-              AuthOptions(
-                onLoginTap: () => _handleLogin(context),
-                onSignUpTap: () => _handleSignUp(context),
-              ),
-            ],
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: AppGradients.background,
+        ),
+        child: SafeArea( 
+          child: Padding(
+            padding: _bodyPadding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                WelcomeHeader(),
+                AuthOptions(
+                  onLoginTap: () => _handleLogin(context),
+                  onSignUpTap: () => _handleSignUp(context),
+                ),
+              ],
+            ),
           ),
         ),
       ),

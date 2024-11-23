@@ -12,7 +12,7 @@ class AppColors {
 
   // Neutral Gray Palette
   static const Color neutral100 = Color(0xFFF9F9F9); 
-  static const Color neutral200 = Color(0xFFECECEC); 
+  static const Color neutral200 = Color(0xFFEBEBEB); 
   static const Color neutral300 = Color(0xFFDCDCDC);
   static const Color neutral400 = Color(0xFFAAAAAA);
   static const Color neutral500 = Color(0xFF918E8D); 

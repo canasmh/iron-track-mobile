@@ -1,16 +1,25 @@
 {
+  "editor.tabSize": 2,
+  "dart.tabSize": 2,
+  "dart.previewCommitCharacters": true,
+  "dart.showInlineErrors": true,
+  "dart.showTodos": true,
+  "dart.analysisExcludedFolders": [
+    ".dart_tool",
+    ".idea",
+    "build",
+    "ios",
+    "android"
+  ],
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": true
-    },
-    "dart.lineLength": 80,
-    "[dart]": {
-      "editor.rulers": [80],
-      "editor.selectionHighlight": false,
-      "editor.suggest.snippetsPreventQuickSuggestions": false,
-      "editor.suggestSelection": "first",
-      "editor.tabCompletion": "onlySnippets",
-      "editor.wordBasedSuggestions": "off"
-    }
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
   }
+}

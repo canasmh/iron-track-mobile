@@ -1,85 +1,52 @@
-# This file configures the analyzer, which statically analyzes Dart code to
-# check for errors, warnings, and lints.
-#
-# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
-# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
-# invoked from the command line by running `flutter analyze`.
-
-# The following line activates a set of recommended lints for Flutter apps,
-# packages, and plugins designed to encourage good coding practices.
-include: package:flutter_lints/flutter.yaml
-
 analyzer:
   language:
     strict-casts: true
     strict-raw-types: true
-  errors:
-    missing_required_param: error
-    missing_return: error
-    todo: info
+    strict-inference: true  # Add this for stricter type checking
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - "**/*.mocks.dart"    # For mockito generated files
+    - "**/generated_*.dart"
 
 linter:
-  # The lint rules applied to this project can be customized in the
-  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
-  # included above or to enable additional rules. A list of all available lints
-  # and their documentation is published at https://dart.dev/lints.
-  #
-  # Instead of disabling a lint rule for the entire project in the
-  # section below, it can also be suppressed for a single line of code
-  # or a specific dart file by using the `// ignore: name_of_lint` and
-  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
-  # producing the lint.
   rules:
-    # Your specific preferences
-    prefer_single_quotes: true          # Use single quotes
-    require_trailing_commas: true       # Trailing commas
-    unnecessary_raw_strings: true       # Avoid raw strings when not needed
-    always_use_package_imports: true    # Use package imports
-    eol_at_end_of_file: true           # Empty line at end of file
+    # Your existing rules plus...
+
+    # Code safety
+    avoid_dynamic_calls: true
+    avoid_slow_async_io: true
+    cancel_subscriptions: true
+    close_sinks: true
+    depend_on_referenced_packages: true
+    test_types_in_equals: true
+    throw_in_finally: true
+    unawaited_futures: true
+    unsafe_html: true
+
+    # Maintainability
+    avoid_private_typedef_functions: true
+    avoid_void_async: true
+    implementation_imports: true
+    no_adjacent_strings_in_list: true
+    prefer_relative_imports: true
+    packages_go_first: true
     
-    # Style
-    prefer_const_constructors: true
-    prefer_const_declarations: true
-    avoid_redundant_argument_values: true
-    curly_braces_in_flow_control_structures: true
-    
-    # Documentation
-    package_api_docs: true
-    slash_for_doc_comments: true
-    
-    # Error prevention
-    avoid_print: true                   # Use logger instead
-    avoid_empty_else: true
-    avoid_type_to_string: true
-    empty_catches: true
-    
-    # Organization
-    always_declare_return_types: true
-    sort_constructors_first: true
-    directives_ordering: true           # Organize imports
-    
-    # Performance
-    prefer_final_locals: true
-    prefer_final_in_for_each: true
+    # Style & Formatting
+    indent: 2
+    lines_longer_than_80_chars: true
+    unnecessary_parenthesis: true
+    unnecessary_string_interpolations: true
+    unnecessary_this: true
+    use_string_buffers: true
     
     # Flutter specific
-    sized_box_for_whitespace: true
-    use_decorated_box: true
-    use_full_hex_values_for_flutter_colors: true
-    
-    # Good practices
-    avoid_returning_null_for_future: true
-    parameter_assignments: true
-    prefer_final_fields: true
-    unnecessary_await_in_return: true
-    
-    # Disabled by default but recommended
-    always_specify_types: false         # Let type inference work
-    cascade_invocations: false          # Sometimes reduces readability
-    diagnostic_describe_all_properties: false
-
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+    avoid_unnecessary_containers: true
+    use_colored_box: true
+    use_enums: true
+    use_if_null_to_convert_nulls_to_bools: true
+    use_named_constants: true
+    use_super_parameters: true

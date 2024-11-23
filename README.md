@@ -57,8 +57,7 @@ iron_track/
 
 
 #### For Android development:
-- Android SDK
-- Android Studio or Command-line tools
+N/A - This project is currently focused on iOS development
 
 ### Setup
 1. Copy the pre-commit hook:

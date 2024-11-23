@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Suggest an idea for Iron Track
-title: "[\U0001F4A1] <--! Replace with title -->"
+title: "\U0001F4A1 <--! Replace with title -->"
 labels: enhancement
 assignees: ''
 
@@ -9,14 +9,14 @@ assignees: ''
 
 ### 💡💡💡
 
-## Problem Statement
-<!-- Describe the problem this feature would solve -->
+## User Story
+<!-- Tell us what benefit this has to the user. As a [persona], I expect/want/etc.. [feature] so that [outcome] -->
 
-## Proposed Solution
-<!-- Describe your solution -->
+As a ...
 
-## Alternative Solutions
-<!-- Describe alternatives you've considered -->
+## Acceptance Criteria
+<!-- List out the acceptance criteria in the form of checkboxes -->
+- [ ] An acceptance criteria
 
 ## Additional Context
 <!-- Add any other context or screenshots -->

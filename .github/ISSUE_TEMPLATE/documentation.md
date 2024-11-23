@@ -1,7 +1,7 @@
 ---
 name: Documentation
 about: Suggest documentation improvements
-title: "[\U0001F4DD] <--! Replace with title -->"
+title: "\U0001F4DD <--! Replace with title -->"
 labels: documentation
 assignees: ''
 

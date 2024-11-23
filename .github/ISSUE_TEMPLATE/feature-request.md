@@ -16,7 +16,7 @@ As a ...
 
 ## Acceptance Criteria
 <!-- List out the acceptance criteria in the form of checkboxes -->
-- [ ] First AC.
+- [ ] An acceptance criteria
 
 ## Additional Context
 <!-- Add any other context or screenshots -->

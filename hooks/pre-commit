@@ -1,0 +1,13 @@
+#!/bin/sh                                                                                                                                     
+
+# Format Dart files                                                                                                                           
+dart format .
+
+# Run analyzer                                                                                                                                
+dart analyze .
+
+# If there are any errors, prevent the commit                                                                                                 
+if [ $? -ne 0 ]; then
+  echo "Fix dart analyzer issues before committing"
+  exit 1
+fi

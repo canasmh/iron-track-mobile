@@ -100,7 +100,7 @@ class AppTheme {
       // Surface colors
       surface: Colors.white,
       onSurface: AppColors.neutral700,
-      surfaceVariant: AppColors.neutral100,
+      surfaceContainerHighest: AppColors.neutral100,
       onSurfaceVariant: AppColors.neutral600,
 
       // Error colors
@@ -130,7 +130,7 @@ class AppTheme {
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
         backgroundColor: AppColors.primary500,
-        foregroundColor: Colors.white,
+        foregroundColor: AppColors.neutral100,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),

@@ -35,7 +35,7 @@ class WelcomeHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(height: _verticalSpacing),
-          AppLogo(textStyle: headlineLarge),
+          AppLogo(textStyle: headlineLarge, withIcon: false, alignment: MainAxisAlignment.center,),
           const SizedBox(height: _verticalSpacing),
           Semantics(
             child: Text(

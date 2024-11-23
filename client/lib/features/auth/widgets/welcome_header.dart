@@ -21,22 +21,31 @@ class WelcomeHeader extends StatelessWidget {
       );
     }
 
-    return Column(
-      children: [
-        Text(
-          AuthStrings.welcome.welcome,
-          textAlign: TextAlign.center,
-          style: textTheme.headlineMedium,
-        ),
-        const SizedBox(height: _verticalSpacing),
-        AppLogo(textStyle: headlineLarge),
-        const SizedBox(height: _verticalSpacing),
-        Text(
-          AuthStrings.welcome.tagline,
-          textAlign: TextAlign.center,
-          style: textTheme.titleLarge,
-        )
-      ],
+    return Semantics(
+      header: true,
+      label: '${AuthStrings.welcome.welcome} IronTrack. ${AuthStrings.welcome.tagline}',
+      child: Column(
+        children: [
+          Semantics(
+            header: true,
+            child: Text(
+              AuthStrings.welcome.welcome,
+              textAlign: TextAlign.center,
+              style: textTheme.headlineMedium,
+            ),
+          ),
+          const SizedBox(height: _verticalSpacing),
+          AppLogo(textStyle: headlineLarge),
+          const SizedBox(height: _verticalSpacing),
+          Semantics(
+            child: Text(
+              AuthStrings.welcome.tagline,
+              textAlign: TextAlign.center,
+              style: textTheme.titleLarge,
+            )
+          ),
+        ],
+      ),
     );
   }
 }

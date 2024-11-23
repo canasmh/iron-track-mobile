@@ -13,16 +13,23 @@ class AppLogo extends StatelessWidget {
 
   static const double _defaultIconSize = 32.0;
   static const double _rotationAngle = -pi / 6;
+  static const double _defaultSpacing = 16.0; 
 
-  final double? iconSize;
+  final double iconSize;
+  final double spacing;
   final TextStyle? textStyle;
-  final String? semanticsLabel;
+  final String semanticsLabel;
+  final bool withIcon;
+  final MainAxisAlignment alignment;
 
   const AppLogo({
     super.key,
+    this.withIcon = true,
     this.iconSize = _defaultIconSize,
+    this.spacing = _defaultSpacing, 
     this.textStyle,
     this.semanticsLabel = 'IronTrack Logo',
+    this.alignment =  MainAxisAlignment.spaceBetween,
   });
 
   @override
@@ -39,18 +46,19 @@ class AppLogo extends StatelessWidget {
     return Semantics(
       label: semanticsLabel,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: alignment,
         children: [
           _buildText('I', 'ron', effectiveTextStyle, primaryColor),
-          Transform.rotate(
-            angle: _rotationAngle,
-            child: FaIcon(
-              FontAwesomeIcons.dumbbell,
-              color: primaryColor,
-              size: iconSize,
-              semanticLabel: 'IronTrack logo dumbbell',
-            ),
-          ),
+          if (withIcon) Transform.rotate(
+              angle: _rotationAngle,
+              child: FaIcon(
+                FontAwesomeIcons.dumbbell,
+                color: primaryColor,
+                size: iconSize,
+                semanticLabel: 'IronTrack logo dumbbell',
+              ),
+            )
+          else SizedBox(width: spacing),
           _buildText('T', 'rack', effectiveTextStyle, primaryColor),
         ],
       ),

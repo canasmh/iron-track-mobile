@@ -22,13 +22,13 @@ void main() {
     ),
   );
 
-  runApp(const MyApp());
+  runApp(const IronTrack());
 }
 
 /// The root widget of the Iron Track application.
 /// Configures global application settings like theme and routing.
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class IronTrack extends StatelessWidget {
+  const IronTrack({super.key});
 
   @override
   Widget build(BuildContext context) {

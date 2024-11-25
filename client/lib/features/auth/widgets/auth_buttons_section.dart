@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:iron_track/features/auth/constants/strings.dart';
+import '../constants/strings.dart';
 
 /// A section containing authentication-related buttons (Login and Sign Up)
-/// 
+///
 /// Shows loading state in the login button when processing.
-/// 
+///
 class AuthButtonsSection extends StatelessWidget {
   static const double _buttonSpacing = 16.0;
 
@@ -21,21 +21,21 @@ class AuthButtonsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch, // This makes buttons full width
+      crossAxisAlignment:
+          CrossAxisAlignment.stretch, // This makes buttons full width
       children: [
         FilledButton(
           onPressed: isLoading ? null : onLoginTap,
-          child: isLoading 
-            ? const SizedBox(
-                height: 20,
-                width: 20,
-                child: CircularProgressIndicator(
-                  strokeWidth: 2,
-                ),
-              )
-            : Text(AuthStrings.buttons.login),
+          child: isLoading
+              ? const SizedBox(
+                  height: 20,
+                  width: 20,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2,
+                  ),
+                )
+              : Text(AuthStrings.buttons.login),
         ),
         const SizedBox(height: _buttonSpacing),
         OutlinedButton(

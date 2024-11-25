@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iron_track/core/widgets/app_logo.dart';
-import 'package:iron_track/features/auth/constants/strings.dart';
+import '../../../core/widgets/app_logo.dart';
+import '../constants/strings.dart';
 
 /// A header widget displayed on the welcome screen showing the app logo
 /// and welcome message. This widget adapts to the current theme and
@@ -14,7 +14,7 @@ class WelcomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final headlineLarge = textTheme.headlineLarge;
-    
+
     if (headlineLarge == null) {
       throw FlutterError(
         'No headlineLarge style found in the current theme.',
@@ -23,7 +23,9 @@ class WelcomeHeader extends StatelessWidget {
 
     return Semantics(
       header: true,
-      label: '${AuthStrings.welcome.welcome} IronTrack. ${AuthStrings.welcome.tagline}',
+      label: AuthStrings.welcome.welcome +
+          ' IronTrack. ' +
+          AuthStrings.welcome.tagline,
       child: Column(
         children: [
           Semantics(
@@ -35,15 +37,18 @@ class WelcomeHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(height: _verticalSpacing),
-          AppLogo(textStyle: headlineLarge, withIcon: false, alignment: MainAxisAlignment.center,),
+          AppLogo(
+            textStyle: headlineLarge,
+            withIcon: false,
+            alignment: MainAxisAlignment.center,
+          ),
           const SizedBox(height: _verticalSpacing),
           Semantics(
-            child: Text(
-              AuthStrings.welcome.tagline,
-              textAlign: TextAlign.center,
-              style: textTheme.titleLarge,
-            )
-          ),
+              child: Text(
+            AuthStrings.welcome.tagline,
+            textAlign: TextAlign.center,
+            style: textTheme.titleLarge,
+          )),
         ],
       ),
     );

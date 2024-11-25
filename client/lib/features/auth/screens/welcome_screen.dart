@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:iron_track/core/theme/app_theme.dart';
-import 'package:iron_track/core/widgets/app_logo.dart';
-import 'package:iron_track/features/auth/screens/login_screen.dart';
-import 'package:iron_track/features/auth/screens/signup_screen.dart';
-import 'package:iron_track/features/auth/widgets/auth_options.dart';
-import 'package:iron_track/features/auth/widgets/welcome_header.dart';
+import '../../../core/theme/app_theme.dart';
+import '../../../core/widgets/app_logo.dart';
+import 'login_screen.dart';
+import 'signup_screen.dart';
+import '../widgets/auth_options.dart';
+import '../widgets/welcome_header.dart';
 
 /// The initial screen shown to unauthenticated users.
 /// Displays the app logo, welcome message, and authentication options.
@@ -37,7 +37,7 @@ class WelcomeScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: AppGradients.background,
         ),
-        child: SafeArea( 
+        child: SafeArea(
           child: Padding(
             padding: _bodyPadding,
             child: Column(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:iron_track/core/theme/app_theme.dart';
-import 'package:iron_track/features/auth/screens/login_screen.dart';
-import 'package:iron_track/features/auth/screens/signup_screen.dart';
-import 'package:iron_track/features/auth/screens/welcome_screen.dart';
+import 'core/theme/app_theme.dart';
+import 'features/auth/screens/login_screen.dart';
+import 'features/auth/screens/signup_screen.dart';
+import 'features/auth/screens/welcome_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Lock orientation to portrait
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

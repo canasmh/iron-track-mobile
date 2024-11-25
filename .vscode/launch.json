@@ -1,12 +1,12 @@
 {
-    "version": "0.2.0",
-    "configurations": [ 
-      {
-        "name": "IronTrack",      // Name that appears in debug dropdown
-        "request": "launch",      // Launch new instance vs attach to existing
-        "type": "dart",          // Use Dart debugger
-        "program": "client/lib/main.dart",
-        "flutterMode": "debug"
-      }
-    ]
-  }
+  "version": "0.2.0",
+  "configurations": [ 
+    {
+      "name": "IronTrack",      // Name that appears in debug dropdown
+      "request": "launch",      // Launch new instance vs attach to existing
+      "type": "dart",          // Use Dart debugger
+      "program": "client/lib/main.dart",
+      "flutterMode": "debug"
+    }
+  ]
+}

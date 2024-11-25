@@ -40,13 +40,20 @@ class WelcomeScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: _bodyPadding,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                WelcomeHeader(),
-                AuthOptions(
-                  onLoginTap: () => _handleLogin(context),
-                  onSignUpTap: () => _handleSignUp(context),
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const WelcomeHeader(),
+                      AuthOptions(
+                        onLoginTap: () => _handleLogin(context),
+                        onSignUpTap: () => _handleSignUp(context),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -62,7 +69,11 @@ class WelcomeScreen extends StatelessWidget {
     return AppBar(
       toolbarHeight: _appBarHeight,
       backgroundColor: colorScheme.surface,
-      title: const AppLogo(),
+      centerTitle: true,
+      title: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 16.0),
+        child: AppLogo(),
+      ),
       titleSpacing: _appBarSpacing,
       shape: Border(
         bottom: BorderSide(

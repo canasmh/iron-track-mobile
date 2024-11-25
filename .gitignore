@@ -25,3 +25,10 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+**/Flutter/ephemeral/
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/Flutter/Flutter-Debug.xcconfig
+**/Flutter/Flutter-Release.xcconfig
+**/Flutter/Flutter-Profile.xcconfig

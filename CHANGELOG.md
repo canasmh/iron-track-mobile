@@ -6,7 +6,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Establish Linter in Flutter (Issue [#18](https://github.com/canasmh/iron-track-mobile/issues/18), PR [#30](https://github.com/canasmh/iron-track-mobile/pull/30))
-
+- Create welcome screen UI (Issue [#14](https://github.com/canasmh/iron-track-mobile/issues/14), PR [#15](https://github.com/canasmh/iron-track-mobile/pull/15))
+- Establish Application Theme (Issue [#13](https://github.com/canasmh/iron-track-mobile/issues/13), PR [#15](https://github.com/canasmh/iron-track-mobile/pull/15))
 
 ### Changed
 
